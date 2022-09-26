@@ -45,13 +45,13 @@ export async function getStaticProps({ params: { slug } }) {
     'utf-8'
   )
 
-  const { data: frontmatter, content } = matter(markdownWithMeta)
+  const { data: frontmatter} = matter(markdownWithMeta)
 
   return {
     props: {
       frontmatter,
       slug,
-      content,
+     
     },
   }
 }
